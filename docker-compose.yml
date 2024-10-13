@@ -1,7 +1,9 @@
 version: '3.7'
 services:
   app:
-    image: node:14
+    build:
+      context: https://github.com/NicolasPalma0511/lab10DAE.git
+      dockerfile: Dockerfile
     deploy:
       replicas: 3
       restart_policy:
