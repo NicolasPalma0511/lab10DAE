@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  app:
+    image: node:14
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USER: "SA"
+      DB_PASSWORD: "YourStrong@Passw0rd"
+      DB_SERVER: "ec2-3-86-84-34.compute-1.amazonaws.com"
+      DB_PORT: "1433"
+      DB_NAME: "lab10"
+    networks:
+      - my_network
+
+networks:
+  my_network:

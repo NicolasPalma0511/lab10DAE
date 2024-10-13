@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <style>
+        table {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Lista de Usuarios</h1>
+    <table>
+        <tr>
+            <th>ID de Usuario</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
+            <th>Fecha de Registro</th>
+        </tr>
+        <% usuarios.forEach(function(usuario) { %>
+            <tr>
+                <td><%= usuario.UsuarioID %></td>
+                <td><%= usuario.Nombre %></td>
+                <td><%= usuario.Correo %></td>
+                <td><%= usuario.Contraseña %></td>
+                <td><%= usuario.FechaRegistro %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
