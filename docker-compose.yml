@@ -1,9 +1,7 @@
 version: '3.7'
 services:
   app:
-    build:
-      context: ./lab10DAE
-      dockerfile: Dockerfile
+    image: nodejs
     deploy:
       replicas: 3
       restart_policy:
