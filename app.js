@@ -5,13 +5,13 @@ const app = express();
 app.set('view engine', 'ejs');
 
 const config = {
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    server: process.env.DB_SERVER,
-    port: process.env.DB_PORT || 1433,
-    database: process.env.DB_NAME,
+    user: 'SA',
+    password: 'YourStrong@Passw0rd',
+    server: 'ec2-3-86-84-34.compute-1.amazonaws.com',
+    port: 1433,
+    database: 'lab10',
     options: {
-        encrypt: true,
+        encrypt: true, 
         trustServerCertificate: true 
     }
 };
