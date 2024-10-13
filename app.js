@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 const config = {
     user: 'SA',
     password: 'YourStrong@Passw0rd',
-    server: 'ec2-52-90-241-113.compute-1.amazonaws.com',
+    server: 'ec2-44-203-122-184.compute-1.amazonaws.com',
     port: 1433,
     database: 'lab10',
     options: {
@@ -15,7 +15,6 @@ const config = {
         trustServerCertificate: true 
     }
 };
-
 
 sql.connect(config).then(pool => {
     console.log('Conectado a MSSQL');
@@ -26,7 +25,7 @@ sql.connect(config).then(pool => {
 app.get('/', async (req, res) => {
     try {
         const pool = await sql.connect(config);
-        const result = await pool.request().query('SELECT UsuarioID, Nombre, Correo, Contraseña, FechaRegistro FROM Usuarios');
+        const result = await pool.request().query('SELECT * FROM Usuarios');
         
         res.render('usuarios', { usuarios: result.recordset });
 
