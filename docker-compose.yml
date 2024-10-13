@@ -2,7 +2,7 @@ version: '3.7'
 services:
   app:
     build:
-      context: https://github.com/NicolasPalma0511/lab10DAE.git
+      context: ./lab10DAE
       dockerfile: Dockerfile
     deploy:
       replicas: 3
