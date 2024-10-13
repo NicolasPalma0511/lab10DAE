@@ -1,8 +1,7 @@
 version: '3.7'
 services:
   app:
-    build: .
-    image: nodejs
+    image: nodejs  # Usa el nombre de la imagen que has construido
     deploy:
       replicas: 3
       restart_policy:
