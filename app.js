@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 const config = {
     user: 'SA',
     password: 'YourStrong@Passw0rd',
-    server: 'ec2-3-86-84-34.compute-1.amazonaws.com',
+    server: 'ec2-52-90-241-113.compute-1.amazonaws.com',
     port: 1433,
     database: 'lab10',
     options: {
